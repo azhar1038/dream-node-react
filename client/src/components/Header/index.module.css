@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    margin: 1em 1em 3em;
+}
+
+.header > h1 {
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+}

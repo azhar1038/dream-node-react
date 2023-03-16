@@ -1,0 +1,13 @@
+.output-box {
+    border: 0.25rem solid var(--surface4);
+    border-radius: 1rem;
+    height: 256px;
+    width: 256px;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}

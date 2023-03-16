@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  nodeserver:
+    build:
+      context: ./server
+    deploy:
+      replicas: 2
+    ports:
+      - '8080'
+    volumes:
+      - ./server:/app
+      - serverNodeModules:/app/node_modules
+
+  app:
+    build:
+      context: ./client
+    ports:
+      - '5000'
+    volumes:
+      - ./client:/app
+      - clientNodeModules:/app/node_modules
+
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - '80:80'
+
+volumes:
+  clientNodeModules:
+  serverNodeModules:

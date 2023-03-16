@@ -1,0 +1,41 @@
+.prompt-form {
+  width: min(25rem, 100%);
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.prompt-form>label {
+  display: block;
+}
+
+.prompt-form > textarea {
+  background-color: var(--surface2);
+  border: 0.25rem solid var(--surface4);
+  border-radius: 1rem;
+  resize: none;
+  height: 5rem;
+  width: 100%;
+  padding: 0.25em 0.75em;
+  margin-block: 0.5em;
+}
+
+.prompt-form > textarea:focus-visible {
+  background-color: var(--surface3);
+  outline: transparent;
+}
+
+.prompt-form > button {
+  background-color: var(--brand);
+  border: none;
+  border-radius: 0.5em;
+  color: var(--text1);
+  padding: 0.5em 1em;
+  min-width: 17ch;
+}
+
+@media screen and (max-width: 40em) {
+  .prompt-form {
+    align-self: flex-end;
+    text-align: center;
+  }
+}
